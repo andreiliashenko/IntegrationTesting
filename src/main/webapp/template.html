@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>${title}</title>
+    </head>
+    <body>
+        <script type = "text/javascript" src = "testcalling.js"></script>
+        <script type = "text/javascript">
+            window.onload = function() {
+                var tests = ${tests};
+                var executorUrl = "${url}";
+                var testsNode = document.getElementById("tests");
+                var statusNode = document.getElementById("status");
+                var traceNode = document.getElementById("trace");
+                var caller = new TestCaller(executorUrl, tests, testsNode,
+                    statusNode, traceNode);
+                caller.startCalling();
+            };
+        </script>
+        <div id='status'></div>
+        <div id='tests'></div>
+        <div id='trace'></div>
+    </body>
+</html>
