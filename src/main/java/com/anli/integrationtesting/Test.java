@@ -1,6 +1,7 @@
 package com.anli.integrationtesting;
 
 public class Test {
+
     protected String name;
     protected String className;
 
@@ -24,7 +25,7 @@ public class Test {
     public void setClassName(String className) {
         this.className = className;
     }
-    
+
     public String toJson() {
         StringBuilder json = new StringBuilder();
         json.append("{");

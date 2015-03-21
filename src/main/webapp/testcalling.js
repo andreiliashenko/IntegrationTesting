@@ -1,4 +1,3 @@
-
 function TestCaller(url, testObjects, testListNode, statusNode, traceNode) {
     this.testObjects = testObjects;
     this.testListNode = testListNode;
@@ -18,7 +17,7 @@ TestCaller.prototype.handleRequest = function(testIndex, request) {
         if (request.status === 200) {
             this.setSucceeded(testIndex);
             testIndex++;
-            if(testIndex < this.testObjects.length) {
+            if (testIndex < this.testObjects.length) {
                 this.addTest(this.testObjects[testIndex]);
                 this.ajaxCall(testIndex);
             } else {
